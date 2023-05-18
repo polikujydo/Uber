@@ -81,6 +81,10 @@ nav{
         font-weight: 400;
         text-align: center;
         border-radius: 4px;
+        &:hover{
+            background-image: none;
+            background-color: #1eacc7;
+        }
     }
 }
 
@@ -128,6 +132,10 @@ nav{
         border-radius: 4px;
         font-size: 18px;
         text-transform: uppercase;
+        &:hover{
+            background-image: none;
+            background-color: #1eacc7;
+        }
     }
 }
 
@@ -169,6 +177,12 @@ nav{
     text-transform: uppercase;
     text-align: center;
     padding-top: 4px;
+    &__white{
+        color:#070716;
+        background-color:#fff;
+        position: relative;
+        z-index: 2;
+    }
 }
 
 .subText{
@@ -179,6 +193,11 @@ nav{
     font-weight: 700;
     margin-top: 33px;
     text-transform: uppercase;
+    &__white{
+        color:#fff;
+        position: relative;
+        z-index: 2;
+    }
 }
 
 .title{
@@ -223,6 +242,27 @@ nav{
             margin: 0 auto;
             padding: 6px;
             cursor: pointer;
+            &:before{
+                content:'';
+                width: 14px;
+                height: 2px;
+                background-color: #1eacc7;
+            }
+            &:after{
+                content:'';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 14px;
+                width: 2px;
+                background-color: #1eacc7;
+                transition: 0.3 all;
+            }
+            &:hover{
+                &:after, &:before{
+                    background-color: #ff5656;
+                }
+            }
         }
         &_1{
             background: url(/src/images/img/cards/Карточка\ 1.png) center center/cover no-repeat
@@ -248,4 +288,220 @@ nav{
 .topDescr{
     text-align: center;
     font-size: 17px;
+    &__white{
+        color:#fff;
+        position: relative;
+        z-index: 2;
+    }
 }
+
+//CHOICE//
+.choice{
+    position: relative;
+    min-height: 900px;
+    padding: 55px 135px;
+    &__img{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        margin-top: 55px;
+        z-index: 2;
+    }
+    &__descr{
+        text-align: center;
+		color: #222222;
+		font-size: 17px;
+		font-weight: 300;
+		line-height: 24px;
+    }
+}
+.black{
+    position: absolute ;
+    top: 0;
+    left: 0;
+    height: 499px;
+    width: 100%;
+    background-color: #070716;
+    z-index: 1;
+}
+
+//Require//
+.require{
+    padding: 60px 90px;
+    &__block{
+        margin: 33px 0;
+        &__nmb{
+            margin-bottom: 0px;
+        }
+    }
+    &__title{
+        color: #1ca8c3;
+        font-size: 22px;
+        &__red{
+            color:#ff5656;
+        }
+        &__red{
+            li{
+                &:before{
+                    background: url('/src/images/icons/check_red\ 1.png');
+                }
+            }
+        }
+    }
+    &__list{
+        list-style-type: none;
+        padding-left: 10px;
+        margin-top: 22px;
+        li{
+            position: relative;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-bottom: 10px;
+            &:before{
+                content:'';
+                display: block;
+                position: absolute;
+                left: -32px;
+                top: 3px;
+                width: 21px;
+                height: 20px;
+                background: url('/src/images/icons/check_blue\ 1.png');
+            }
+        }
+    }
+    .warning{
+        .require__title{
+            color:#ff5656
+        }
+        .require__list{
+            li{
+                &:before{
+                    background: url('/src/images/icons/check_red\ 1.png');
+                }
+            }
+        }
+    }
+}
+
+//WORLD//
+.world{
+  min-height: 700px;
+  padding: 50px 0;
+  background: url('/src/images/img/map.jpg') center center/cover no-repeat;
+  position: relative;
+  &__link{
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #1EACC7
+    }
+}
+
+//FOOTER//
+footer{
+    padding: 11px 21px 11px 21px;
+    a{
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover{
+            text-decoration: none
+        }
+    }
+}
+
+.footer{
+    &__divider{
+        width: 300px;
+        height: 4px;
+        background-color: #1fbad6;
+        margin: 0 auto;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 32px;
+    }
+    &__wrapper > div {
+        width: 33%;
+        &:nth-child(3){
+            margin-left: 150px;
+        }
+
+    }
+    &__social{
+        width: 160px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20%;
+        &__item{
+            display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 4px ;
+			width: 32px;
+			height: 32px;
+			background-color: #070716;
+			border-radius: 100%;
+            i{
+                color: #fff;
+            }
+        }
+    }
+    &__links{
+        width: 390px;
+        margin: 0 auto;
+        margin-left: 80px;
+        &__main{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            a{
+                color: #070716;
+				font-size: 15px;
+				font-weight: 300;
+            }
+        }
+        &__sub{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            a{
+                color: #999999;
+				font-size: 11px;
+				font-weight: 300;
+            }
+        }
+        &__lang{
+            display: block;
+            color: #1EACC7;
+            margin: 0 auto;
+            font-size: 11px;
+            text-align: center;
+            margin-top: 19px;
+        }
+    }
+    &__mobile{
+        margin-left: 60px;
+        &__apple{
+            height: 25px;
+            width: 75px;
+        }
+        &__google{
+            height: 37px;
+            width: 80px;
+        }
+        &__windows{
+            height: 30px;
+            width: 75px;
+        }
+    }   
+}
+
